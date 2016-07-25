@@ -19,11 +19,11 @@ static int kEJNibLinkableViewTag = 999;
 
 - (id)awakeAfterUsingCoder:(NSCoder *)aDecoder
 {
-    [self swizzleAwakeFromNibIfNeeded];
-    
     if (self.subviews.count != 0 && self.tag != kEJNibLinkableViewTag) {
         return [super awakeAfterUsingCoder:aDecoder];
     }
+    
+    [self swizzleAwakeFromNib];
     
     UIView *loadedView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
     loadedView.frame = self.frame;
@@ -53,13 +53,9 @@ static int kEJNibLinkableViewTag = 999;
     return loadedView;
 }
 
-- (void)swizzleAwakeFromNibIfNeeded
+- (void)swizzleAwakeFromNib
 {
     Class class = [self class];
-    if ([class isAwakeFromNibSwizzled]) {
-        return;
-    }
-    [class setIsAwakeFromNibSwizzled];
     
     SEL originalSelector = @selector(awakeFromNib);
     SEL swizzledSelector = @selector(awakeFromLinkableNib);
@@ -82,21 +78,16 @@ static int kEJNibLinkableViewTag = 999;
     }
 }
 
-+ (void)setIsAwakeFromNibSwizzled
-{
-    objc_setAssociatedObject(self, @selector(isAwakeFromNibSwizzled), @YES, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-+ (BOOL)isAwakeFromNibSwizzled
-{
-    return [objc_getAssociatedObject(self, @selector(isAwakeFromNibSwizzled)) boolValue];
-}
-
 - (void)awakeFromLinkableNib {
-    if (!self.isAwake) {
+    if (self.isAwake) {
+        [self swizzleAwakeFromNib];
+    }
+    else {
         self.isAwake = YES;
         [self awakeFromLinkableNib];
     }
 }
 
 @end
+
+
