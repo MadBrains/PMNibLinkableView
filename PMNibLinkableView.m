@@ -10,44 +10,40 @@
 #import <objc/runtime.h>
 
 @interface PMNibLinkableView ()
-@property (nonatomic, strong) NSMutableArray *isAwake;
+@property (nonatomic, strong) NSMutableArray *awakedClasses;
 @end
 
 @implementation PMNibLinkableView
 
 static int kPMNibLinkableViewTag = 999;
 
-+ (void)initialize {
++ (void)initialize
+{
     [super initialize];
-    if (self != [PMNibLinkableView class]) {
-        [self swizzleAwakeFromNib];
-    }
+    [self swizzleAwakeFromNib];
 }
 
 + (void)swizzleAwakeFromNib
 {
     Class class = [self class];
     SEL originalSelector = @selector(awakeFromNib);
-    NSString *className = NSStringFromClass(class);
-
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     void (*originalImp)(id, SEL) = (void (*)(id, SEL))method_getImplementation(originalMethod);
     
     IMP blockImpl = imp_implementationWithBlock(^(PMNibLinkableView *self) {
-        
-        if (!self.isAwake) {
-            self.isAwake = [NSMutableArray array];
+        if (!self.awakedClasses) {
+            self.awakedClasses = [NSMutableArray array];
         }
         
-        if (![self.isAwake containsObject:className]) {
+        NSString *className = NSStringFromClass(class);
+        if (![self.awakedClasses containsObject:className]) {
+            [self.awakedClasses addObject:className];
             
-            [self.isAwake addObject:className];
             originalImp(self, @selector(awakeFromNib));
         }
-        
     });
     
-    BOOL didAddMethod = class_addMethod(class, originalSelector, blockImpl, "v@:");
+    BOOL didAddMethod = class_addMethod(class, originalSelector, blockImpl, method_getTypeEncoding(originalMethod));
     
     if (!didAddMethod) {
         method_setImplementation(originalMethod, blockImpl);
