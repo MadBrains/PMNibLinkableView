@@ -16,6 +16,12 @@
 		5AF7CE461D479B9100C9BA36 /* PMNibLinkableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7CE451D479B9100C9BA36 /* PMNibLinkableView.m */; };
 		5AF7CE491D479BDF00C9BA36 /* PMFirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7CE481D479BDF00C9BA36 /* PMFirstView.m */; };
 		5AF7CE4B1D479BFA00C9BA36 /* PMFirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE4A1D479BFA00C9BA36 /* PMFirstView.xib */; };
+		5AF7CE4E1D47A14E00C9BA36 /* PMSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7CE4D1D47A14E00C9BA36 /* PMSecondView.m */; };
+		5AF7CE501D47A15E00C9BA36 /* PMSecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE4F1D47A15E00C9BA36 /* PMSecondView.xib */; };
+		5AF7CE541D47A21200C9BA36 /* PMThirdParentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7CE531D47A21200C9BA36 /* PMThirdParentView.m */; };
+		5AF7CE561D47A21D00C9BA36 /* PMThirdParentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE551D47A21D00C9BA36 /* PMThirdParentView.xib */; };
+		5AF7CE5A1D47A3A300C9BA36 /* PMThirdChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7CE591D47A3A300C9BA36 /* PMThirdChildView.m */; };
+		5AF7CE5C1D47A3AE00C9BA36 /* PMThirdChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE5B1D47A3AE00C9BA36 /* PMThirdChildView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,15 @@
 		5AF7CE471D479BDF00C9BA36 /* PMFirstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMFirstView.h; sourceTree = "<group>"; };
 		5AF7CE481D479BDF00C9BA36 /* PMFirstView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMFirstView.m; sourceTree = "<group>"; };
 		5AF7CE4A1D479BFA00C9BA36 /* PMFirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMFirstView.xib; sourceTree = "<group>"; };
+		5AF7CE4C1D47A14E00C9BA36 /* PMSecondView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSecondView.h; sourceTree = "<group>"; };
+		5AF7CE4D1D47A14E00C9BA36 /* PMSecondView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSecondView.m; sourceTree = "<group>"; };
+		5AF7CE4F1D47A15E00C9BA36 /* PMSecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMSecondView.xib; sourceTree = "<group>"; };
+		5AF7CE521D47A21200C9BA36 /* PMThirdParentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThirdParentView.h; sourceTree = "<group>"; };
+		5AF7CE531D47A21200C9BA36 /* PMThirdParentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThirdParentView.m; sourceTree = "<group>"; };
+		5AF7CE551D47A21D00C9BA36 /* PMThirdParentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMThirdParentView.xib; sourceTree = "<group>"; };
+		5AF7CE581D47A3A300C9BA36 /* PMThirdChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThirdChildView.h; sourceTree = "<group>"; };
+		5AF7CE591D47A3A300C9BA36 /* PMThirdChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThirdChildView.m; sourceTree = "<group>"; };
+		5AF7CE5B1D47A3AE00C9BA36 /* PMThirdChildView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMThirdChildView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +83,10 @@
 			children = (
 				5AF7CE441D479B9100C9BA36 /* PMNibLinkableView.h */,
 				5AF7CE451D479B9100C9BA36 /* PMNibLinkableView.m */,
-				5AF7CE2D1D479B5A00C9BA36 /* AppDelegate.h */,
-				5AF7CE2E1D479B5A00C9BA36 /* AppDelegate.m */,
-				5AF7CE301D479B5A00C9BA36 /* ViewController.h */,
-				5AF7CE311D479B5A00C9BA36 /* ViewController.m */,
 				5AF7CE331D479B5A00C9BA36 /* Main.storyboard */,
-				5AF7CE361D479B5A00C9BA36 /* Assets.xcassets */,
-				5AF7CE381D479B5A00C9BA36 /* LaunchScreen.storyboard */,
-				5AF7CE3B1D479B5A00C9BA36 /* Info.plist */,
+				5AF7CE511D47A1EC00C9BA36 /* Views */,
+				5AF7CE571D47A24C00C9BA36 /* Unimportant */,
 				5AF7CE2A1D479B5A00C9BA36 /* Supporting Files */,
-				5AF7CE471D479BDF00C9BA36 /* PMFirstView.h */,
-				5AF7CE481D479BDF00C9BA36 /* PMFirstView.m */,
-				5AF7CE4A1D479BFA00C9BA36 /* PMFirstView.xib */,
 			);
 			path = PMNibLinkableViewExample;
 			sourceTree = "<group>";
@@ -90,6 +97,39 @@
 				5AF7CE2B1D479B5A00C9BA36 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AF7CE511D47A1EC00C9BA36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AF7CE471D479BDF00C9BA36 /* PMFirstView.h */,
+				5AF7CE481D479BDF00C9BA36 /* PMFirstView.m */,
+				5AF7CE4A1D479BFA00C9BA36 /* PMFirstView.xib */,
+				5AF7CE4C1D47A14E00C9BA36 /* PMSecondView.h */,
+				5AF7CE4D1D47A14E00C9BA36 /* PMSecondView.m */,
+				5AF7CE4F1D47A15E00C9BA36 /* PMSecondView.xib */,
+				5AF7CE521D47A21200C9BA36 /* PMThirdParentView.h */,
+				5AF7CE531D47A21200C9BA36 /* PMThirdParentView.m */,
+				5AF7CE551D47A21D00C9BA36 /* PMThirdParentView.xib */,
+				5AF7CE581D47A3A300C9BA36 /* PMThirdChildView.h */,
+				5AF7CE591D47A3A300C9BA36 /* PMThirdChildView.m */,
+				5AF7CE5B1D47A3AE00C9BA36 /* PMThirdChildView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5AF7CE571D47A24C00C9BA36 /* Unimportant */ = {
+			isa = PBXGroup;
+			children = (
+				5AF7CE2D1D479B5A00C9BA36 /* AppDelegate.h */,
+				5AF7CE2E1D479B5A00C9BA36 /* AppDelegate.m */,
+				5AF7CE301D479B5A00C9BA36 /* ViewController.h */,
+				5AF7CE311D479B5A00C9BA36 /* ViewController.m */,
+				5AF7CE361D479B5A00C9BA36 /* Assets.xcassets */,
+				5AF7CE381D479B5A00C9BA36 /* LaunchScreen.storyboard */,
+				5AF7CE3B1D479B5A00C9BA36 /* Info.plist */,
+			);
+			name = Unimportant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +191,10 @@
 			files = (
 				5AF7CE4B1D479BFA00C9BA36 /* PMFirstView.xib in Resources */,
 				5AF7CE3A1D479B5A00C9BA36 /* LaunchScreen.storyboard in Resources */,
+				5AF7CE501D47A15E00C9BA36 /* PMSecondView.xib in Resources */,
+				5AF7CE561D47A21D00C9BA36 /* PMThirdParentView.xib in Resources */,
 				5AF7CE371D479B5A00C9BA36 /* Assets.xcassets in Resources */,
+				5AF7CE5C1D47A3AE00C9BA36 /* PMThirdChildView.xib in Resources */,
 				5AF7CE351D479B5A00C9BA36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,7 +209,10 @@
 				5AF7CE321D479B5A00C9BA36 /* ViewController.m in Sources */,
 				5AF7CE461D479B9100C9BA36 /* PMNibLinkableView.m in Sources */,
 				5AF7CE2F1D479B5A00C9BA36 /* AppDelegate.m in Sources */,
+				5AF7CE4E1D47A14E00C9BA36 /* PMSecondView.m in Sources */,
+				5AF7CE5A1D47A3A300C9BA36 /* PMThirdChildView.m in Sources */,
 				5AF7CE491D479BDF00C9BA36 /* PMFirstView.m in Sources */,
+				5AF7CE541D47A21200C9BA36 /* PMThirdParentView.m in Sources */,
 				5AF7CE2C1D479B5A00C9BA36 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
