@@ -8,9 +8,11 @@
 
 #import "PMNibLinkableView.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface PMNibLinkableView ()
-@property (nonatomic, assign) BOOL isAwake;
+//@property (nonatomic, assign) BOOL isAwake;
+@property (nonatomic, strong) NSMutableArray *isAwake;
 @end
 
 @implementation PMNibLinkableView
@@ -30,10 +32,27 @@ static NSString * const kPMNibLinkableViewAwakeFromLinkableNib = @"awakeFromLink
     Class class = [self class];
     SEL originalSelector = @selector(awakeFromNib);
     SEL swizzledSelector = NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib);
-    
-    class_addMethod(class, swizzledSelector, (IMP)awakeFromLinkableNib, "v@:");
-    
+    NSString *className = NSStringFromClass(class);
+
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    void (*originalImp)(id, SEL) = (void (*)(id, SEL))method_getImplementation(originalMethod);
+    
+    IMP blockImpl = imp_implementationWithBlock(^(PMNibLinkableView *self) {
+        
+        if (!self.isAwake) {
+            self.isAwake = [NSMutableArray array];
+        }
+        
+        if (![self.isAwake containsObject:className]) {
+            
+            [self.isAwake addObject:className];
+            originalImp(self, NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib));
+        }
+        
+    });
+    
+    class_addMethod(class, swizzledSelector, blockImpl, "v@:");
+    
     Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
     
     BOOL didAddMethod = class_addMethod(class,
@@ -48,16 +67,6 @@ static NSString * const kPMNibLinkableViewAwakeFromLinkableNib = @"awakeFromLink
     }
     else {
         method_exchangeImplementations(originalMethod, swizzledMethod);
-    }
-}
-
-void awakeFromLinkableNib(PMNibLinkableView *self, SEL _cmd) {
-    if (!self.isAwake) {
-        self.isAwake = YES;
-        #pragma clang diagnostic push
-        #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [self performSelector:NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib)];
-        #pragma clang diagnostic pop
     }
 }
 
