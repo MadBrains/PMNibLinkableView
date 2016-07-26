@@ -21,7 +21,7 @@ static int kEJNibLinkableViewTag = 999;
 
 + (void)initialize {
     [super initialize];
-    if ([self class] != [PMNibLinkableView class]) {
+    if (self != [PMNibLinkableView class]) {
         [self swizzleAwakeFromNib];
     }
 }
