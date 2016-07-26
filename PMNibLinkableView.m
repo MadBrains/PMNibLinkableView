@@ -15,8 +15,8 @@
 
 @implementation PMNibLinkableView
 
-static int kEJNibLinkableViewTag = 999;
-static NSString * const kEJNibLinkableViewAwakeFromLinkableNib = @"awakeFromLinkableNib";
+static int kPMNibLinkableViewTag = 999;
+static NSString * const kPMNibLinkableViewAwakeFromLinkableNib = @"awakeFromLinkableNib";
 
 + (void)initialize {
     [super initialize];
@@ -29,7 +29,7 @@ static NSString * const kEJNibLinkableViewAwakeFromLinkableNib = @"awakeFromLink
 {
     Class class = [self class];
     SEL originalSelector = @selector(awakeFromNib);
-    SEL swizzledSelector = NSSelectorFromString(kEJNibLinkableViewAwakeFromLinkableNib);
+    SEL swizzledSelector = NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib);
     
     class_addMethod(class, swizzledSelector, (IMP)awakeFromLinkableNib, "v@:");
     
@@ -56,14 +56,14 @@ void awakeFromLinkableNib(PMNibLinkableView *self, SEL _cmd) {
         self.isAwake = YES;
         #pragma clang diagnostic push
         #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [self performSelector:NSSelectorFromString(kEJNibLinkableViewAwakeFromLinkableNib)];
+        [self performSelector:NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib)];
         #pragma clang diagnostic pop
     }
 }
 
 - (id)awakeAfterUsingCoder:(NSCoder *)aDecoder
 {
-    if (self.subviews.count != 0 && self.tag != kEJNibLinkableViewTag) {
+    if (self.subviews.count != 0 && self.tag != kPMNibLinkableViewTag) {
         return [super awakeAfterUsingCoder:aDecoder];
     }
     
