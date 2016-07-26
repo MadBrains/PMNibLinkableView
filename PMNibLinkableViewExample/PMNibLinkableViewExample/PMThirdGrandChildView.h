@@ -1,5 +1,5 @@
 //
-//  PMThirdChildView.m
+//  PMThirdGrandChildView.h
 //  PMNibLinkableViewExample
 //
 //  Created by Anatoliy Peshkov on 26/07/2016.
@@ -8,6 +8,6 @@
 
 #import "PMThirdChildView.h"
 
-@implementation PMThirdChildView
+@interface PMThirdGrandChildView : PMThirdChildView
 
 @end

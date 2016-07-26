@@ -11,8 +11,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThirdChild" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzB-Yu-WcD">
-                    <rect key="frame" x="260.5" y="289.5" width="79" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="ThirdChild" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzB-Yu-WcD">
+                    <rect key="frame" x="260" y="289" width="79" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -21,7 +21,11 @@
             <color key="backgroundColor" red="1" green="0.94834846644495974" blue="0.38428552674539296" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="SzB-Yu-WcD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9FK-IM-l3e"/>
+                <constraint firstItem="SzB-Yu-WcD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Mwc-rq-6ka"/>
                 <constraint firstItem="SzB-Yu-WcD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pi6-O2-reg"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SzB-Yu-WcD" secondAttribute="bottom" constant="8" id="Rf7-Bc-FF1"/>
+                <constraint firstItem="SzB-Yu-WcD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="V2L-8F-vfs"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SzB-Yu-WcD" secondAttribute="trailing" constant="8" id="ubB-CY-5ov"/>
             </constraints>
         </view>
     </objects>

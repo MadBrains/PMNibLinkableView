@@ -22,6 +22,9 @@
 		5AF7CE561D47A21D00C9BA36 /* PMThirdParentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE551D47A21D00C9BA36 /* PMThirdParentView.xib */; };
 		5AF7CE5A1D47A3A300C9BA36 /* PMThirdChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7CE591D47A3A300C9BA36 /* PMThirdChildView.m */; };
 		5AF7CE5C1D47A3AE00C9BA36 /* PMThirdChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE5B1D47A3AE00C9BA36 /* PMThirdChildView.xib */; };
+		5AF7CE5F1D4815C400C9BA36 /* PMThirdGrandChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7CE5E1D4815C400C9BA36 /* PMThirdGrandChildView.m */; };
+		5AF7CE611D4815D100C9BA36 /* PMThirdGrandChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE601D4815D100C9BA36 /* PMThirdGrandChildView.xib */; };
+		5AF7CE631D481DAC00C9BA36 /* PMNibLinkableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7CE621D481DAC00C9BA36 /* PMNibLinkableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,10 @@
 		5AF7CE581D47A3A300C9BA36 /* PMThirdChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThirdChildView.h; sourceTree = "<group>"; };
 		5AF7CE591D47A3A300C9BA36 /* PMThirdChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThirdChildView.m; sourceTree = "<group>"; };
 		5AF7CE5B1D47A3AE00C9BA36 /* PMThirdChildView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMThirdChildView.xib; sourceTree = "<group>"; };
+		5AF7CE5D1D4815C400C9BA36 /* PMThirdGrandChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThirdGrandChildView.h; sourceTree = "<group>"; };
+		5AF7CE5E1D4815C400C9BA36 /* PMThirdGrandChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThirdGrandChildView.m; sourceTree = "<group>"; };
+		5AF7CE601D4815D100C9BA36 /* PMThirdGrandChildView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMThirdGrandChildView.xib; sourceTree = "<group>"; };
+		5AF7CE621D481DAC00C9BA36 /* PMNibLinkableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMNibLinkableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +109,7 @@
 		5AF7CE511D47A1EC00C9BA36 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AF7CE621D481DAC00C9BA36 /* PMNibLinkableView.xib */,
 				5AF7CE471D479BDF00C9BA36 /* PMFirstView.h */,
 				5AF7CE481D479BDF00C9BA36 /* PMFirstView.m */,
 				5AF7CE4A1D479BFA00C9BA36 /* PMFirstView.xib */,
@@ -114,6 +122,9 @@
 				5AF7CE581D47A3A300C9BA36 /* PMThirdChildView.h */,
 				5AF7CE591D47A3A300C9BA36 /* PMThirdChildView.m */,
 				5AF7CE5B1D47A3AE00C9BA36 /* PMThirdChildView.xib */,
+				5AF7CE5D1D4815C400C9BA36 /* PMThirdGrandChildView.h */,
+				5AF7CE5E1D4815C400C9BA36 /* PMThirdGrandChildView.m */,
+				5AF7CE601D4815D100C9BA36 /* PMThirdGrandChildView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -194,8 +205,10 @@
 				5AF7CE501D47A15E00C9BA36 /* PMSecondView.xib in Resources */,
 				5AF7CE561D47A21D00C9BA36 /* PMThirdParentView.xib in Resources */,
 				5AF7CE371D479B5A00C9BA36 /* Assets.xcassets in Resources */,
+				5AF7CE611D4815D100C9BA36 /* PMThirdGrandChildView.xib in Resources */,
 				5AF7CE5C1D47A3AE00C9BA36 /* PMThirdChildView.xib in Resources */,
 				5AF7CE351D479B5A00C9BA36 /* Main.storyboard in Resources */,
+				5AF7CE631D481DAC00C9BA36 /* PMNibLinkableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +221,7 @@
 			files = (
 				5AF7CE321D479B5A00C9BA36 /* ViewController.m in Sources */,
 				5AF7CE461D479B9100C9BA36 /* PMNibLinkableView.m in Sources */,
+				5AF7CE5F1D4815C400C9BA36 /* PMThirdGrandChildView.m in Sources */,
 				5AF7CE2F1D479B5A00C9BA36 /* AppDelegate.m in Sources */,
 				5AF7CE4E1D47A14E00C9BA36 /* PMSecondView.m in Sources */,
 				5AF7CE5A1D47A3A300C9BA36 /* PMThirdChildView.m in Sources */,
@@ -364,6 +378,7 @@
 				5AF7CE401D479B5A00C9BA36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

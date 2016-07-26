@@ -9,5 +9,6 @@
 #import "PMNibLinkableView.h"
 
 @interface PMSecondView : PMNibLinkableView
-
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet id delegate;
 @end
