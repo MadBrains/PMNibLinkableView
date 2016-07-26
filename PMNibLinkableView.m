@@ -10,54 +10,43 @@
 #import <objc/runtime.h>
 
 @interface PMNibLinkableView ()
-@property (nonatomic, assign) BOOL isAwake;
+@property (nonatomic, strong) NSMutableArray *awakedClasses;
 @end
 
 @implementation PMNibLinkableView
 
 static int kPMNibLinkableViewTag = 999;
-static NSString * const kPMNibLinkableViewAwakeFromLinkableNib = @"awakeFromLinkableNib";
 
-+ (void)initialize {
++ (void)initialize
+{
     [super initialize];
-    if (self != [PMNibLinkableView class]) {
-        [self swizzleAwakeFromNib];
-    }
+    [self swizzleAwakeFromNib];
 }
 
 + (void)swizzleAwakeFromNib
 {
     Class class = [self class];
     SEL originalSelector = @selector(awakeFromNib);
-    SEL swizzledSelector = NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib);
-    
-    class_addMethod(class, swizzledSelector, (IMP)awakeFromLinkableNib, "v@:");
-    
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
-    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+    void (*originalImp)(id, SEL) = (void (*)(id, SEL))method_getImplementation(originalMethod);
     
-    BOOL didAddMethod = class_addMethod(class,
-                                        originalSelector,
-                                        method_getImplementation(swizzledMethod),
-                                        method_getTypeEncoding(swizzledMethod));
-    if (didAddMethod) {
-        class_replaceMethod(class,
-                            swizzledSelector,
-                            method_getImplementation(originalMethod),
-                            method_getTypeEncoding(originalMethod));
-    }
-    else {
-        method_exchangeImplementations(originalMethod, swizzledMethod);
-    }
-}
-
-void awakeFromLinkableNib(PMNibLinkableView *self, SEL _cmd) {
-    if (!self.isAwake) {
-        self.isAwake = YES;
-        #pragma clang diagnostic push
-        #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [self performSelector:NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib)];
-        #pragma clang diagnostic pop
+    IMP blockImpl = imp_implementationWithBlock(^(PMNibLinkableView *self) {
+        if (!self.awakedClasses) {
+            self.awakedClasses = [NSMutableArray array];
+        }
+        
+        NSString *className = NSStringFromClass(class);
+        if (![self.awakedClasses containsObject:className]) {
+            [self.awakedClasses addObject:className];
+            
+            originalImp(self, @selector(awakeFromNib));
+        }
+    });
+    
+    BOOL didAddMethod = class_addMethod(class, originalSelector, blockImpl, method_getTypeEncoding(originalMethod));
+    
+    if (!didAddMethod) {
+        method_setImplementation(originalMethod, blockImpl);
     }
 }
 
