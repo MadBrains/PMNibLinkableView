@@ -8,17 +8,14 @@
 
 #import "PMNibLinkableView.h"
 #import <objc/runtime.h>
-#import <objc/message.h>
 
 @interface PMNibLinkableView ()
-//@property (nonatomic, assign) BOOL isAwake;
 @property (nonatomic, strong) NSMutableArray *isAwake;
 @end
 
 @implementation PMNibLinkableView
 
 static int kPMNibLinkableViewTag = 999;
-static NSString * const kPMNibLinkableViewAwakeFromLinkableNib = @"awakeFromLinkableNib";
 
 + (void)initialize {
     [super initialize];
@@ -31,7 +28,6 @@ static NSString * const kPMNibLinkableViewAwakeFromLinkableNib = @"awakeFromLink
 {
     Class class = [self class];
     SEL originalSelector = @selector(awakeFromNib);
-    SEL swizzledSelector = NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib);
     NSString *className = NSStringFromClass(class);
 
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
@@ -46,27 +42,15 @@ static NSString * const kPMNibLinkableViewAwakeFromLinkableNib = @"awakeFromLink
         if (![self.isAwake containsObject:className]) {
             
             [self.isAwake addObject:className];
-            originalImp(self, NSSelectorFromString(kPMNibLinkableViewAwakeFromLinkableNib));
+            originalImp(self, @selector(awakeFromNib));
         }
         
     });
     
-    class_addMethod(class, swizzledSelector, blockImpl, "v@:");
+    BOOL didAddMethod = class_addMethod(class, originalSelector, blockImpl, "v@:");
     
-    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-    
-    BOOL didAddMethod = class_addMethod(class,
-                                        originalSelector,
-                                        method_getImplementation(swizzledMethod),
-                                        method_getTypeEncoding(swizzledMethod));
-    if (didAddMethod) {
-        class_replaceMethod(class,
-                            swizzledSelector,
-                            method_getImplementation(originalMethod),
-                            method_getTypeEncoding(originalMethod));
-    }
-    else {
-        method_exchangeImplementations(originalMethod, swizzledMethod);
+    if (!didAddMethod) {
+        method_setImplementation(originalMethod, blockImpl);
     }
 }
 
