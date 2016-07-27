@@ -1,0 +1,6 @@
+framework module Pods_PMNibLinkableView_Tests {
+  umbrella header "Pods-PMNibLinkableView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

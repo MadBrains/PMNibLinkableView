@@ -1,0 +1,16 @@
+PODS:
+  - PMNibLinkableView (0.1.0)
+
+DEPENDENCIES:
+  - PMNibLinkableView (from `../`)
+
+EXTERNAL SOURCES:
+  PMNibLinkableView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PMNibLinkableView: ce02bdf0b3c0c7854a6425398a7ee38a78c9721e
+
+PODFILE CHECKSUM: 584fbce01efec1aa170e0796915e0b1e15abe966
+
+COCOAPODS: 1.0.1

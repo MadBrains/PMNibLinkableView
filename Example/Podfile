@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PMNibLinkableView_Example' do
+  pod 'PMNibLinkableView', :path => '../'
+
+  target 'PMNibLinkableView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
