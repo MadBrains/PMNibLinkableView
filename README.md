@@ -1,15 +1,10 @@
 # PMNibLinkableView
 
-[![CI Status](http://img.shields.io/travis/Antol/PMNibLinkableView.svg?style=flat)](https://travis-ci.org/Antol/PMNibLinkableView)
-[![Version](https://img.shields.io/cocoapods/v/PMNibLinkableView.svg?style=flat)](http://cocoapods.org/pods/PMNibLinkableView)
-[![License](https://img.shields.io/cocoapods/l/PMNibLinkableView.svg?style=flat)](http://cocoapods.org/pods/PMNibLinkableView)
-[![Platform](https://img.shields.io/cocoapods/p/PMNibLinkableView.svg?style=flat)](http://cocoapods.org/pods/PMNibLinkableView)
+PMNibLinkableView gives view described in separate xib ability to be loaded in other xib or storyboard without creating it manually in code
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
