@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0A3138056E4F662782616231 /* Pods_PMNibLinkableView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8DDE4C7F4DA844FFFBAE4A /* Pods_PMNibLinkableView_Tests.framework */; };
+		5A7359301D48B1E80063FA61 /* PMFirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7359211D48B1E80063FA61 /* PMFirstView.m */; };
+		5A7359311D48B1E80063FA61 /* PMFirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7359221D48B1E80063FA61 /* PMFirstView.xib */; };
+		5A7359321D48B1E80063FA61 /* PMNibLinkableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7359231D48B1E80063FA61 /* PMNibLinkableView.xib */; };
+		5A7359331D48B1E80063FA61 /* PMSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7359251D48B1E80063FA61 /* PMSecondView.m */; };
+		5A7359341D48B1E80063FA61 /* PMSecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7359261D48B1E80063FA61 /* PMSecondView.xib */; };
+		5A7359351D48B1E80063FA61 /* PMThirdChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7359281D48B1E80063FA61 /* PMThirdChildView.m */; };
+		5A7359361D48B1E80063FA61 /* PMThirdChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7359291D48B1E80063FA61 /* PMThirdChildView.xib */; };
+		5A7359371D48B1E80063FA61 /* PMThirdGrandChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73592B1D48B1E80063FA61 /* PMThirdGrandChildView.m */; };
+		5A7359381D48B1E80063FA61 /* PMThirdGrandChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A73592C1D48B1E80063FA61 /* PMThirdGrandChildView.xib */; };
+		5A7359391D48B1E80063FA61 /* PMThirdParentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73592E1D48B1E80063FA61 /* PMThirdParentView.m */; };
+		5A73593A1D48B1E80063FA61 /* PMThirdParentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A73592F1D48B1E80063FA61 /* PMThirdParentView.xib */; };
+		5A73593D1D48B2BB0063FA61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A73593C1D48B2BB0063FA61 /* LaunchScreen.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,6 +51,23 @@
 		10C4CB20DC38B8746A446BF4 /* Pods-PMNibLinkableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMNibLinkableView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMNibLinkableView_Tests/Pods-PMNibLinkableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4AEF4CCA02CEC31300868396 /* Pods-PMNibLinkableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMNibLinkableView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMNibLinkableView_Tests/Pods-PMNibLinkableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5192C6967755DC13F78315BD /* Pods_PMNibLinkableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMNibLinkableView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7359201D48B1E80063FA61 /* PMFirstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMFirstView.h; sourceTree = "<group>"; };
+		5A7359211D48B1E80063FA61 /* PMFirstView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMFirstView.m; sourceTree = "<group>"; };
+		5A7359221D48B1E80063FA61 /* PMFirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMFirstView.xib; sourceTree = "<group>"; };
+		5A7359231D48B1E80063FA61 /* PMNibLinkableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMNibLinkableView.xib; sourceTree = "<group>"; };
+		5A7359241D48B1E80063FA61 /* PMSecondView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSecondView.h; sourceTree = "<group>"; };
+		5A7359251D48B1E80063FA61 /* PMSecondView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSecondView.m; sourceTree = "<group>"; };
+		5A7359261D48B1E80063FA61 /* PMSecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMSecondView.xib; sourceTree = "<group>"; };
+		5A7359271D48B1E80063FA61 /* PMThirdChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThirdChildView.h; sourceTree = "<group>"; };
+		5A7359281D48B1E80063FA61 /* PMThirdChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThirdChildView.m; sourceTree = "<group>"; };
+		5A7359291D48B1E80063FA61 /* PMThirdChildView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMThirdChildView.xib; sourceTree = "<group>"; };
+		5A73592A1D48B1E80063FA61 /* PMThirdGrandChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThirdGrandChildView.h; sourceTree = "<group>"; };
+		5A73592B1D48B1E80063FA61 /* PMThirdGrandChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThirdGrandChildView.m; sourceTree = "<group>"; };
+		5A73592C1D48B1E80063FA61 /* PMThirdGrandChildView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMThirdGrandChildView.xib; sourceTree = "<group>"; };
+		5A73592D1D48B1E80063FA61 /* PMThirdParentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMThirdParentView.h; sourceTree = "<group>"; };
+		5A73592E1D48B1E80063FA61 /* PMThirdParentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMThirdParentView.m; sourceTree = "<group>"; };
+		5A73592F1D48B1E80063FA61 /* PMThirdParentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMThirdParentView.xib; sourceTree = "<group>"; };
+		5A73593C1D48B2BB0063FA61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PMNibLinkableView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMNibLinkableView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +122,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A73591F1D48B1D90063FA61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A7359231D48B1E80063FA61 /* PMNibLinkableView.xib */,
+				5A7359201D48B1E80063FA61 /* PMFirstView.h */,
+				5A7359211D48B1E80063FA61 /* PMFirstView.m */,
+				5A7359221D48B1E80063FA61 /* PMFirstView.xib */,
+				5A7359241D48B1E80063FA61 /* PMSecondView.h */,
+				5A7359251D48B1E80063FA61 /* PMSecondView.m */,
+				5A7359261D48B1E80063FA61 /* PMSecondView.xib */,
+				5A7359271D48B1E80063FA61 /* PMThirdChildView.h */,
+				5A7359281D48B1E80063FA61 /* PMThirdChildView.m */,
+				5A7359291D48B1E80063FA61 /* PMThirdChildView.xib */,
+				5A73592A1D48B1E80063FA61 /* PMThirdGrandChildView.h */,
+				5A73592B1D48B1E80063FA61 /* PMThirdGrandChildView.m */,
+				5A73592C1D48B1E80063FA61 /* PMThirdGrandChildView.xib */,
+				5A73592D1D48B1E80063FA61 /* PMThirdParentView.h */,
+				5A73592E1D48B1E80063FA61 /* PMThirdParentView.m */,
+				5A73592F1D48B1E80063FA61 /* PMThirdParentView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5A73593B1D48B1F30063FA61 /* Unimportant */ = {
+			isa = PBXGroup;
+			children = (
+				5A73593C1D48B2BB0063FA61 /* LaunchScreen.storyboard */,
+				6003F59C195388D20070C39A /* PMAppDelegate.h */,
+				6003F59D195388D20070C39A /* PMAppDelegate.m */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+			);
+			name = Unimportant;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +193,11 @@
 		6003F593195388D20070C39A /* Example for PMNibLinkableView */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* PMAppDelegate.h */,
-				6003F59D195388D20070C39A /* PMAppDelegate.m */,
+				5A73591F1D48B1D90063FA61 /* Views */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* PMViewController.h */,
 				6003F5A6195388D20070C39A /* PMViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
+				5A73593B1D48B1F30063FA61 /* Unimportant */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for PMNibLinkableView";
@@ -276,9 +338,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7359311D48B1E80063FA61 /* PMFirstView.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				5A7359321D48B1E80063FA61 /* PMNibLinkableView.xib in Resources */,
+				5A73593D1D48B2BB0063FA61 /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				5A7359381D48B1E80063FA61 /* PMThirdGrandChildView.xib in Resources */,
+				5A73593A1D48B1E80063FA61 /* PMThirdParentView.xib in Resources */,
+				5A7359361D48B1E80063FA61 /* PMThirdChildView.xib in Resources */,
+				5A7359341D48B1E80063FA61 /* PMSecondView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,9 +459,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7359371D48B1E80063FA61 /* PMThirdGrandChildView.m in Sources */,
+				5A7359351D48B1E80063FA61 /* PMThirdChildView.m in Sources */,
+				5A7359301D48B1E80063FA61 /* PMFirstView.m in Sources */,
+				5A7359391D48B1E80063FA61 /* PMThirdParentView.m in Sources */,
 				6003F59E195388D20070C39A /* PMAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PMViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				5A7359331D48B1E80063FA61 /* PMSecondView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

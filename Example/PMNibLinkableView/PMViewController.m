@@ -7,9 +7,10 @@
 //
 
 #import "PMViewController.h"
+#import "PMSecondView.h"
 
 @interface PMViewController ()
-
+@property (weak, nonatomic) IBOutlet PMSecondView *secondView;
 @end
 
 @implementation PMViewController
@@ -17,13 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"=ViewController=> Second wiew text %@", self.secondView.label.text);
+    NSLog(@"=ViewController=> Second wiew delegate %@", self.secondView.delegate);
 }
 
 @end
