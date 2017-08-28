@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PMNibLinkableView'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'PMNibLinkableView gives view described in separate xib ability to be loaded in other xib or storyboard without creating it manually in code'
   s.description      = <<-DESC
 PMNibLinkableView gives view described in separate xib ability to be loaded in other xib or storyboard without creating it manually in code.
