@@ -56,7 +56,8 @@ static int kPMNibLinkableViewTag = 999;
         return [super awakeAfterUsingCoder:aDecoder];
     }
     
-    UIView *loadedView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
+    NSString *xibFileName = [NSStringFromClass([self class]) componentsSeparatedByString:@"."].lastObject;
+    UIView *loadedView = [[[NSBundle mainBundle] loadNibNamed:xibFileName owner:nil options:nil] firstObject];
     loadedView.frame = self.frame;
     loadedView.alpha = self.alpha;
     loadedView.autoresizingMask = self.autoresizingMask;
