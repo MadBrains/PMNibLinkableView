@@ -80,6 +80,7 @@ static int kPMNibLinkableViewTag = 999;
                                                                         multiplier:constraint.multiplier
                                                                           constant:constraint.constant];
         newConstraint.priority = constraint.priority;
+        newConstraint.identifier = constraint.identifier;
         [loadedView addConstraint:newConstraint];
     }
     return loadedView;
